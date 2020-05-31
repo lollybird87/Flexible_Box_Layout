@@ -1,0 +1,122 @@
+@import "reset.css";
+@import "Roboto.css";
+:root {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: #b9dee6;
+
+}
+
+.userCard{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+}
+.userCardContainer {
+    --user-card-image-size: 150px;
+    min-width: 150px;
+    width: 100%;
+    max-width: 320px;
+
+    margin: 10px;
+    padding: 10px;
+
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+
+    box-shadow: 4px 4px 4px 0 rgba(51,46,51,1);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userAboutSelf {
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin: 20px;
+}
+.userName{
+    color: #fe5332;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: 300;
+}
+.userSurname{
+    font-size: 1.5em;
+padding: 10px;
+
+}
+.userImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--user-card-image-size);
+    width: var(--user-card-image-size);
+    border-radius: 50%;
+    margin: 10px 0;
+    background-color: #efefef;
+
+    position: relative;
+
+    }
+.userImageWrapper::after{
+    content: "";
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-image: repeating-linear-gradient(dodgerblue 0, dodgerblue 50%,yellow  50%,yellow  100%);
+    position: absolute;
+    left: 50%;
+    margin-left: 30px;
+    top: 110px;
+    box-shadow: 4px 4px 5px 0 rgba(84,77,84,0.18);
+
+}
+
+.userImageWrapper > img {
+    height:calc(var(--user-card-image-size) - 20px) ;
+    width:calc(var(--user-card-image-size) - 20px) ;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+}
+
+.userStatWrapper {
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    margin: 20px;
+    margin-top: auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.icons{
+    color: red;
+}
+
